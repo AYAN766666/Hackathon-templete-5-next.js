@@ -1,8 +1,11 @@
+
+
+
 "use client";
-import { CarTaxiFront, ChevronDown,  Facebook, Heart, Instagram, Link , Mail, Menu, Phone, Search,  Twitter, Youtube } from "lucide-react";
+import { CarTaxiFront, ChevronDown,  Facebook, Heart, Instagram, Link, Mail, Menu, Phone, Search,  Twitter, Youtube } from "lucide-react";
 import React from "react";
 
- 
+
 import {
   Sheet,
   SheetContent,
@@ -13,11 +16,11 @@ import {
   
 
 
-export default function Header() {
+export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       {/* Top Bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between bg-black px-4 py-2 text-sm">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-[#23856D] px-4 py-2 text-sm">
         {/* Phone */}
         <div className="flex items-center space-x-2 text-white font-bold">
           <Phone className="text-lg" />
@@ -34,7 +37,7 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Social MediaIcons */}
+        {/* Social Media Icons */}
         <div className="flex items-center space-x-3 text-white">
           <span className="hover:text-cyan-400">Follow Us:</span>
           <Link href="#"><Facebook className="text-lg hover:text-cyan-400" /></Link>
@@ -52,19 +55,20 @@ export default function Header() {
         </h1>
 
         
-         {/* Navigation as */}
+         {/* Navigation Links */}
          <nav className="hidden md:flex space-x-6 items-center">
-       <Link href="/"        className="text-slate-600 hover:text-cyan-400">Home</Link>
+          <Link href="/" className="text-slate-600 hover:text-cyan-400">Home</Link>
           <div className="flex items-center space-x-1">
-            <Link    href="/shop"  className="text-slate-600 hover:text-cyan-400">
-              Shop
-            </Link>
+            <Link href={'/shop'} className="text-slate-600 hover:text-cyan-400">
+              Shop 
+              </Link>
+            
             <ChevronDown className="text-black hover:text-cyan-400" />
           </div>
-           <Link      href="/about" className="text-slate-600 hover:text-cyan-400">about </Link>
-          <Link href='/blog'className="text-slate-600 hover:text-cyan-400">Blog</Link>
+          <Link href="/about" className="text-slate-600 hover:text-cyan-400">About</Link>
+          <Link href="/blog"className="text-slate-600 hover:text-cyan-400">Blog</Link>
           <Link href="/contact" className="text-slate-600 hover:text-cyan-400">Contact</Link>
-          <Link href="/page" className="text-slate-600 hover:text-cyan-400">Pages</Link>
+          <Link href="page" className="text-slate-600 hover:text-cyan-400">Pages</Link>
         </nav>
 
         {/* Login / Register */}
@@ -114,23 +118,23 @@ export default function Header() {
         </div>
   
     
- {/* Navigation as */}
+ {/* Navigation Links */}
  <nav className="py-2 ">
           <Link href="/" className="text-black hover:text-cyan-400 ">Home</Link> <hr></hr> 
           <div className="flex items-center space-x-1 py-3"> 
-            <Link href="/shop" className="text-slate-600 hover:text-cyan-400  "> 
+            <Link href="#" className="text-slate-600 hover:text-cyan-400  "> 
               Shop
             </Link> 
             <ChevronDown className="text-black hover:text-cyan-400 " />
           </div>  <hr></hr>
           <div className="py-4">
-          <Link href="/about" className="text-slate-600 hover:text-cyan-400 items-center space-x-1 py-4">about</Link> <hr></hr>
+          <Link href="/shop" className="text-slate-600 hover:text-cyan-400 items-center space-x-1 py-4">About</Link> <hr></hr>
           </div> 
           <div className="py-4">
           <Link href="/blog" className="text-slate-600 hover:text-cyan-400 py-3">Blog</Link> <hr></hr>
          </div > 
          <div className="py-4">
-          <Link href="#" className="text-slate-600 hover:text-cyan-400 py-3">Contact</Link> <hr></hr>
+          <Link href="/contact" className="text-slate-600 hover:text-cyan-400 py-3">Contact</Link> <hr></hr>
           </div> 
           <div className="py-4">
           <Link href="/page" className="text-slate-600 hover:text-cyan-400 ">Pages</Link> <hr></hr>

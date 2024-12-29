@@ -1,32 +1,41 @@
 
-        
-        import Image from "next/image"
-import women from "../../../public/shop.jpg"
+import Image from "next/image";
+import women from "../../../public/shop.jpg";
 
-export default function Card(){
-    return(
-        <div className="w-[1439px] h-[716px] absolute top-[136px] left-[70px] border   ">
-          <div className="w-[1440px] h-[716px]">
-                 <Image src={women} alt="women"/>
-          </div>
-         
+export default function Carausel() {
+  return (
+    <div className="relative w-full h-screen flex items-center justify-center bg-black"   id="home"       >
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={women}
+          alt="Women"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
+
       {/* Content Overlay */}
-      <div className="absolute flex flex-col justify-center left-[100px] top-[100px] items-start gap-[35px] px-6 lg:px-16 z-10">
-        <h5 className="font-Montserrat font-semibold text-[16px] leading-[24px] text-white">
-          SUMMER 2020
+      <div className="relative z-10 text-white px-4 sm:px-8 lg:px-16 flex flex-col items-start gap-4 max-w-screen-md">
+        <h5 className="text-xs sm:text-sm lg:text-base font-semibold uppercase tracking-wide">
+          Summer 2020
         </h5>
-        <h1 className="font-Montserrat font-semibold text-[58px] leading-[80px] text-white max-w-[600px]">
-          NEW COLLECTION
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+          New Collection
         </h1>
-        <h4 className="font-Montserrat font-normal text-[20px] leading-[30px] text-white max-w-[500px]">
+        <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-[90%]">
           We know how large objects will act, but things on a small scale.
-        </h4>
-        <button className="w-[221px] h-[62px] rounded-[5px] px-[40px] py-[15px] bg-[#2DC071] text-white text-[24px] font-Montserrat leading-[32px] justify-center">
-          SHOP NOW
+        </p>
+        <button className="bg-[#2DC071] px-6 py-2 sm:px-8 sm:py-3 text-sm sm:text-lg lg:text-xl font-semibold rounded-lg hover:bg-[#28a360] transition">
+          Shop Now
         </button>
       </div>
-        </div>
-    )
+    </div>
+  );
 }
 
+      
+      
+    
     
