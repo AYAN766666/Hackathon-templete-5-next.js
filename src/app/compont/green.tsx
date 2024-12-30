@@ -135,7 +135,7 @@ export default function Header() {
           <Link href="/blog" className="text-slate-600 hover:text-cyan-400 py-3">Blog</Link> <hr></hr>
          </div > 
          <div className="py-4">
-          <Link href="#" className="text-slate-600 hover:text-cyan-400 py-3">Contact</Link> <hr></hr>
+          <Link href="/contact" className="text-slate-600 hover:text-cyan-400 py-3">Contact</Link> <hr></hr>
           </div> 
           <div className="py-4">
           <Link href="/page" className="text-slate-600 hover:text-cyan-400 ">Pages</Link> <hr></hr>
