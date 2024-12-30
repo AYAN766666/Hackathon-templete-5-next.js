@@ -1,11 +1,13 @@
 
 
 
-"use client";
+
+"use client"; 
+import Link from "next/link";
 import { CarTaxiFront, ChevronDown,  Facebook, Heart, Instagram, Mail, Menu, Phone, Search,  Twitter, Youtube } from "lucide-react";
 import React from "react";
 
-
+ 
 import {
   Sheet,
   SheetContent,
@@ -16,34 +18,34 @@ import {
   
 
 
-export default function Navbar() {
+export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       {/* Top Bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between bg-[#23856D] px-4 py-2 text-sm">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-[#23866D] px-4 py-2 text-sm">
         {/* Phone */}
         <div className="flex items-center space-x-2 text-white font-bold">
           <Phone className="text-lg" />
-          <a href="#" className="hover:text-cyan-400">
+          <Link href="#" className="hover:text-cyan-400">
           (225) 555-0118
-          </a>
+          </Link>
         </div>
 
         {/* Email */}
         <div className="flex items-center space-x-2 text-white font-bold">
           < Mail className="text-lg" />
-          <a href="#" className="hover:text-cyan-400">
+          <Link href="#" className="hover:text-cyan-400">
           michelle.rivera@example.com
-          </a>
+          </Link>
         </div>
 
-        {/* Social Media Icons */}
+        {/* Social MediaIcons */}
         <div className="flex items-center space-x-3 text-white">
           <span className="hover:text-cyan-400">Follow Us:</span>
-          <a href="#"><Facebook className="text-lg hover:text-cyan-400" /></a>
-          <a href="#"><Instagram className="text-lg hover:text-cyan-400" /></a>
-          <a href="#">< Youtube className="text-lg hover:text-cyan-400" /></a>
-          <a href="#"><Twitter className="text-lg hover:text-cyan-400" /></a>
+          <Link href="#"><Facebook className="text-lg hover:text-cyan-400" /></Link>
+          <Link href="#"><Instagram className="text-lg hover:text-cyan-400" /></Link>
+          <Link href="#">< Youtube className="text-lg hover:text-cyan-400" /></Link>
+          <Link href="#"><Twitter className="text-lg hover:text-cyan-400" /></Link>
         </div>
       </div>
 
@@ -57,37 +59,36 @@ export default function Navbar() {
         
          {/* Navigation as */}
          <nav className="hidden md:flex space-x-6 items-center">
-          <a href="/" className="text-slate-600 hover:text-cyan-400">Home</a>
+       <Link href="/"        className="text-slate-600 hover:text-cyan-400">Home</Link>
           <div className="flex items-center space-x-1">
-            <a href={'/shop'} className="text-slate-600 hover:text-cyan-400">
-              Shop 
-              </a>
-            
+            <Link   href="/shop"  className="text-slate-600 hover:text-cyan-400">
+              Shop
+            </Link>
             <ChevronDown className="text-black hover:text-cyan-400" />
           </div>
-          <a href="/about" className="text-slate-600 hover:text-cyan-400">About</a>
-          <a href="/blog"className="text-slate-600 hover:text-cyan-400">Blog</a>
-          <a href="/contact" className="text-slate-600 hover:text-cyan-400">Contact</a>
-          <a href="page" className="text-slate-600 hover:text-cyan-400">Pages</a>
+           <Link    href="/about" className="text-slate-600 hover:text-cyan-400">about </Link>
+          <Link href='/blog'className="text-slate-600 hover:text-cyan-400">Blog</Link>
+          <Link href="/contact" className="text-slate-600 hover:text-cyan-400">Contact</Link>
+          <Link href="/page" className="text-slate-600 hover:text-cyan-400">Pages</Link>
         </nav>
 
         {/* Login / Register */}
         <div className="hidden md:flex items-center space-x-2 text-sky-400 font-bold">
-          <a href="#" className="hover:underline hover:text-cyan-400">
+          <Link href="#" className="hover:underline hover:text-cyan-400">
             Login
-          </a>
+          </Link>
           <span>/</span>
-          <a href="#" className="hover:underline hover:text-cyan-400">
+          <Link href="#" className="hover:underline hover:text-cyan-400">
             Register
-          </a>
+          </Link>
         </div>
         
 
         {/* Icons */}
         <div className="flex items-center space-x-4 text-xl text-sky-400">
-          <a href="#" className="hover:text-cyan-400">
+          <Link href="#" className="hover:text-cyan-400">
             <Search />
-          </a>
+          </Link>
           <div className="relative hover:text-cyan-400">
             <Heart />
             <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
@@ -108,36 +109,36 @@ export default function Navbar() {
   <SheetContent className="">
    {/* Login / Register */}
    <div className="px-20 gap-1   text-sky-400 font-bold ">
-          <a href="#" className="hover:underline hover:text-cyan-400 px-1 ">
+          <Link href="#" className="hover:underline hover:text-cyan-400 px-1 ">
             Login
-          </a>
+          </Link>
           <span >/</span>
-          <a href="#" className="hover:underline hover:text-cyan-400 px-1" >
+          <Link href="#" className="hover:underline hover:text-cyan-400 px-1" >
             Register
-          </a>
+          </Link>
         </div>
   
     
  {/* Navigation as */}
  <nav className="py-2 ">
-          <a href="/" className="text-black hover:text-cyan-400 ">Home</a> <hr></hr> 
+          <Link href="/" className="text-black hover:text-cyan-400 ">Home</Link> <hr></hr> 
           <div className="flex items-center space-x-1 py-3"> 
-            <a href="#" className="text-slate-600 hover:text-cyan-400  "> 
+            <Link href="/shop" className="text-slate-600 hover:text-cyan-400  "> 
               Shop
-            </a> 
+            </Link> 
             <ChevronDown className="text-black hover:text-cyan-400 " />
           </div>  <hr></hr>
           <div className="py-4">
-          <a href="/shop" className="text-slate-600 hover:text-cyan-400 items-center space-x-1 py-4">About</a> <hr></hr>
-          </div> 
+          <Link href="/about" className="text-slate-600 hover:text-cyan-400 items-center space-x-1 py-4">about</Link> <hr></hr>
+          </div>
           <div className="py-4">
-          <a href="/blog" className="text-slate-600 hover:text-cyan-400 py-3">Blog</a> <hr></hr>
+          <Link href="/blog" className="text-slate-600 hover:text-cyan-400 py-3">Blog</Link> <hr></hr>
          </div > 
          <div className="py-4">
-          <a href="/contact" className="text-slate-600 hover:text-cyan-400 py-3">Contact</a> <hr></hr>
+          <Link href="#" className="text-slate-600 hover:text-cyan-400 py-3">Contact</Link> <hr></hr>
           </div> 
           <div className="py-4">
-          <a href="/page" className="text-slate-600 hover:text-cyan-400 ">Pages</a> <hr></hr>
+          <Link href="/page" className="text-slate-600 hover:text-cyan-400 ">Pages</Link> <hr></hr>
           </div>
         </nav>
       
@@ -156,5 +157,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-  
